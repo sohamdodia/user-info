@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
   const Users = sequelize.define("users", {
     id: {
-      type: DataTypes.UUID,
-      primaryKey: true,
-      defaultValue: DataTypes.UUIDV4
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
     },
     firstName: {
       type: DataTypes.STRING,

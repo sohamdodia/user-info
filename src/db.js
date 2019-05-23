@@ -1,5 +1,7 @@
 const Sequelize = require("sequelize");
+
 const config = require("../config");
+
 const sequelize = new Sequelize(
   config.const.database,
   config.const.dbUser,
@@ -26,6 +28,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.movies = require("./model")(sequelize, Sequelize);
+db.users = require("./model")(sequelize, Sequelize);
 
 module.exports = db;

@@ -12,6 +12,11 @@ app.options("*", cors());
 
 //JSON parser
 app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 
 //Server Routes
 app.use("/", routes);
