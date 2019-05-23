@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "b0e51acc-16cb-45bd-8818-8f2880420f84",
+		"name": "Tricog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Soham",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Dodia",
+							"type": "text"
+						},
+						{
+							"key": "fatherName",
+							"value": "Ganpatsinh",
+							"type": "text"
+						},
+						{
+							"key": "panNumber",
+							"value": "CGPRD1234F",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1995-12-27",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sohamdodia@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Valsad",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:6005/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "6005",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Examle",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Soham",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Dodia",
+									"type": "text"
+								},
+								{
+									"key": "fatherName",
+									"value": "Ganpatsinh",
+									"type": "text"
+								},
+								{
+									"key": "panNumber",
+									"value": "CGPRD1234F",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "1995-12-27",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "sohamdodia@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Valsad",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": null
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:6005/users/create",
+							"host": [
+								"localhost"
+							],
+							"port": "6005",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "641"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"281-whxg7SIRGoPoP/yHLZ22591Drno\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2019 13:30:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Request completed successfully.\",\n    \"data\": {\n        \"user\": {\n            \"id\": 19,\n            \"firstName\": \"Soham\",\n            \"lastName\": \"Dodia\",\n            \"fatherName\": \"Ganpatsinh\",\n            \"panNumber\": \"CGPRD1234F\",\n            \"dob\": \"1995-12-27\",\n            \"gender\": \"male\",\n            \"email\": \"sohamdodia@gmail.com\",\n            \"address\": \"Valsad\",\n            \"profileImage\": \"https://d1qb2nb5cznatu.cloudfront.net/startups/i/1091501-2dda92b28ad6e4309d1f23977cd8f5ce-medium_jpg.jpg?buster=1460432983\",\n            \"updatedAt\": \"2019-05-23T13:30:22.445Z\",\n            \"createdAt\": \"2019-05-23T13:30:22.445Z\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImlhdCI6MTU1ODYxODIyMiwiZXhwIjoxNTU5NTUxMzQyfQ.HYVeUk4oFTI7_MxX-2qGJR8lGK0k4S1Po7rWF8C0VFY\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImlhdCI6MTU1ODYxODIyMiwiZXhwIjoxNTU5NTUxMzQyfQ.HYVeUk4oFTI7_MxX-2qGJR8lGK0k4S1Po7rWF8C0VFY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:6005/users",
+					"host": [
+						"localhost"
+					],
+					"port": "6005",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImlhdCI6MTU1ODYxODIyMiwiZXhwIjoxNTU5NTUxMzQyfQ.HYVeUk4oFTI7_MxX-2qGJR8lGK0k4S1Po7rWF8C0VFY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:6005/users",
+							"host": [
+								"localhost"
+							],
+							"port": "6005",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "482"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e2-QdJ7OhCXhta04g9ojs4Qz5mSJDE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2019 13:31:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Request completed successfully.\",\n    \"data\": {\n        \"id\": 19,\n        \"firstName\": \"Soham\",\n        \"lastName\": \"Dodia\",\n        \"fatherName\": \"Ganpatsinh\",\n        \"panNumber\": \"CGPRD1234F\",\n        \"dob\": \"1995-12-27\",\n        \"gender\": \"male\",\n        \"email\": \"sohamdodia@gmail.com\",\n        \"address\": \"Valsad\",\n        \"profileImage\": \"https://d1qb2nb5cznatu.cloudfront.net/startups/i/1091501-2dda92b28ad6e4309d1f23977cd8f5ce-medium_jpg.jpg?buster=1460432983\",\n        \"createdAt\": \"2019-05-23T13:30:22.000Z\",\n        \"updatedAt\": \"2019-05-23T13:30:22.000Z\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		}
+	]
+}
